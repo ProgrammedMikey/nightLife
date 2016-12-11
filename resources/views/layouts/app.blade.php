@@ -82,6 +82,29 @@
         @yield('content')
     </div>
 
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted" align="center">Night Life Coordination app powered by Yelp API and Laravel.</p>
+        </div>
+    </footer>
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 40px;
+            background-color: #f5f5f5;
+        }
+    </style>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="/js/home.js"></script>
