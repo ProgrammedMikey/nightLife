@@ -22,14 +22,20 @@
 
 Route::group(['middleware' => ['web']], function() {
     Route::get('/', [
-        'uses' => 'YelpController@index',
+        'uses' => 'HomeController@index',
         'as' => 'index'
     ]);
     Route::post('/new', [
-        'uses' => 'YelpController@storeYelp',
+        'uses' => 'HomeController@storeYelp',
         'as' => 'create'
     ]);
+    Route::post('/new/like', [
+        'uses' => 'HomeController@postLikePost',
+        'as' => 'like'
+    ]);
 });
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
