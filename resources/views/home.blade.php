@@ -46,10 +46,16 @@
                                 <br />
                                 <span style="font-style: italic">" {{$yelpResult -> snippet_text}} "</span>
                                     <br />
+                                    @if(Auth::user())
                                    <div class="btn-group">
                                        <button type="button" class="btn btn-secondary like">{{ Auth::user()->likes()->where('post_id', $yelpResult->id)->first() ? Auth::user()->likes()->where('post_id', $yelpResult->id)->first()->like == 1 ? 'Going!' : 'Not Going' : 'Not Going' }}</button>
                                        {{--<a href="#" class="like">not ging </a>--}}
                                    </div>
+                                    @else <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary"><a href="{{ url('/login') }}">Click To Go!</a></button>
+                                        {{--<a href="#" class="like">not ging </a>--}}
+                                    </div>
+                                    @endif
                                 {{--<a href="{{ route('post.like', $yelpResult->id) }}">Unlike this shit</a>--}}
                                 {{--{{$yelpResult -> id}}--}}
                             </div>
