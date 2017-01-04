@@ -1,7 +1,7 @@
 # nightlife-coordination-app Laravel
 Built for Nightlife Coordination App challenge on Free Code Camp. This project builds off my custom boilerplate project, fcc-starter.
 
-**Live Demo:** http://intense-dawn-25077.herokuapp.com/
+**Live Demo:** http://mdasilva-nightlife.herokuapp.com/
 
 ---
 
